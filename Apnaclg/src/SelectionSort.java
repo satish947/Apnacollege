@@ -1,4 +1,4 @@
-public class InsertionSort {
+public class SelectionSort {
     public static void insertionsort(int arr[]){
         for(int i=0 ; i<arr.length-1;i++){
             int minpos = i;
