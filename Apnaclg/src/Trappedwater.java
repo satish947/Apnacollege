@@ -20,7 +20,7 @@ public class Trappedwater {
 
     }
     public static void main(String args[]){
-        int height[] ={4 ,0,2,6,4,5};
+        int height[] =  {4, 2, 0, 3, 2, 5};
         System.out.print(trappedwater(height)); 
     }
     
