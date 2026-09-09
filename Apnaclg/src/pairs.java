@@ -8,7 +8,7 @@ public class pairs {
         }
     }
     
-public static void main(String args[]){
+public static void main(Palindromestring args[]){
     int numbers[]= { 2,4,5,6,7};
     printpairs(numbers);
     

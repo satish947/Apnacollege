@@ -1,6 +1,6 @@
 import java.util.*;
 public class array{
-    public static void main(String args[]){
+    public static void main(Palindromestring args[]){
     int marks[] = new int[100];
     Scanner sc = new Scanner(System.in);
     marks[0]=sc.nextInt();

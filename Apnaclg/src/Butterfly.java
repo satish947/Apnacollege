@@ -23,7 +23,7 @@ public class Butterfly {
     }
 
 
-public static void main(String args[]){
+public static void main(Palindromestring args[]){
     butterfly(4);
 }
 }

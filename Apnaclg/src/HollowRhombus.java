@@ -14,7 +14,7 @@ public class HollowRhombus {
                 System.out.println();
             }
         }
-    public static void main(String args[]){
+    public static void main(Palindromestring args[]){
         hollow_rhombus(5);
     }
     

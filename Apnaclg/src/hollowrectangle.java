@@ -10,7 +10,7 @@ public class hollowrectangle {
             }
             System.out.println();
         }
-    }public static void main(String args[]){
+    }public static void main(Palindromestring args[]){
         hollow_rectangle(5,5);
     }
     

@@ -11,7 +11,7 @@ public class kadanes {
         }
         System.out.println("maximum subarray sum is : "+ms);
     }
-    public static void main(String args[]){
+    public static void main(Palindromestring args[]){
         int numbers[] ={-2,-3,4,-1,-2,1,5,-3};
         kadanes(numbers);
     }

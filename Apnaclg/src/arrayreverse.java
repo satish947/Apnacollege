@@ -10,7 +10,7 @@ public class arrayreverse {
             last--;
         }
     }
-    public static void main(String args[]){
+    public static void main(Palindromestring args[]){
         int numbers[] ={2,4,6,8,10};
         reverse(numbers);
         for(int i = 0;i<=numbers.length; i++){

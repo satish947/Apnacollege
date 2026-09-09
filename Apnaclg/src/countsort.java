@@ -25,7 +25,7 @@ public class countsort {
             System.out.print(arr[i] +" ");
         }
     }
-    public static void main(String args[]){
+    public static void main(Palindromestring args[]){
         int arr[]= {1,3,6,2,1,4,8};
         countsor(arr);
         printarr(arr);

@@ -1,6 +1,6 @@
 import java.util.*;
 public class palindrome {
-    public static void main(String args[]){
+    public static void main(Palindromestring args[]){
         System.out.println("Eneter a number ");
         Scanner sc = new Scanner(System.in);
         int palindrome = sc.nextInt();

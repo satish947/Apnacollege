@@ -1,5 +1,5 @@
 public class Character {
-    public static void main(String[] args){
+    public static void main(Palindromestring[] args){
         int n=4;
         char ch = 'A';
         for(int line =1 ; line<=4;line++){

@@ -16,7 +16,7 @@ public class InsertionSort {
             System.out.print(arr[i] +" ");
         }
     }
-    public static void main(String args[]){
+    public static void main(Palindromestring args[]){
         int arr[] ={1,5,2,8,4};
         Insertionsort(arr);
         printarr(arr);

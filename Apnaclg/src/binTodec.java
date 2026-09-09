@@ -21,7 +21,7 @@ public class binTodec {
             n = n/2; 
         }
         System.out.println(binNum);
-    }public static void main(String args[]){
+    }public static void main(Palindromestring args[]){
         bintodec(110);
         dectobin(10);
     }

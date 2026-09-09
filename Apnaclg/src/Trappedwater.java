@@ -19,7 +19,7 @@ public class Trappedwater {
         return trappedwater;
 
     }
-    public static void main(String args[]){
+    public static void main(Palindromestring args[]){
         int height[] =  {4, 2, 0, 3, 2, 5};
         System.out.print(trappedwater(height)); 
     }

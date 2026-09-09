@@ -13,7 +13,7 @@ public class transpose {
 
         
     }
-    public static void main(String args[]){
+    public static void main(Palindromestring args[]){
         int matrix[][]={{1,2,3},{4,5,7}};
         int row = 2; int col = 3;
         printmatrix(matrix);

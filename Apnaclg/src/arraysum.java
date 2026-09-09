@@ -20,7 +20,7 @@ public class arraysum {
                 }
             }System.out.println("max sum :"+maxSum);
         }
-        public static void main(String args[]){
+        public static void main(Palindromestring args[]){
             int numbers[] ={1,3,5,7,9};
             maxsumarray(numbers);
 

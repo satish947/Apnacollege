@@ -14,7 +14,7 @@ public class Diamond {
                 System.out.print("*");
             }System.out.println();
         }
-    }public static void main(String args[]){
+    }public static void main(Palindromestring args[]){
             diamond(6);
         }
     

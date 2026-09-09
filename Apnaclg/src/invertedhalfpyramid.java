@@ -8,7 +8,7 @@ public class invertedhalfpyramid {
             System.out.print("*");
         }System.out.println();
     }
-    }public static void main(String args[]){
+    }public static void main(Palindromestring args[]){
       invertedpyramid(7);
     }
     

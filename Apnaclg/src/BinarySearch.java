@@ -13,7 +13,7 @@ public class BinarySearch {
             }
         }
         return -1;
-    }public static void main(String args[]){
+    }public static void main(Palindromestring args[]){
         int numbers[]={1,4,2,10,24,55};
         int key = 10;
         System.out.println("key is at index: "+  binarysearch(numbers , key));

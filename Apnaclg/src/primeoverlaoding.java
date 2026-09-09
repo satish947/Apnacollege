@@ -13,7 +13,7 @@ public class primeoverlaoding {
             System.out.print(i);
         }System.out.println();
     }
-  } public static void main(String args[]){
+  } public static void main(Palindromestring args[]){
     primeInrange(50);
   }
 }

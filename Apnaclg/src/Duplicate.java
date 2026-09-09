@@ -9,7 +9,7 @@ public class Duplicate {
             
         }return false;
     }
-    public static void main(String args[]){
+    public static void main(Palindromestring args[]){
         int num[]= {1,2,2,5,6};
        System.out.print(Duplicatenum(num));
     }

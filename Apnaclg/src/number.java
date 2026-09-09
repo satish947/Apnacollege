@@ -16,7 +16,7 @@ public class number {
      System.out.println(num);
      
 }
-    public static void main(String args[]){
+    public static void main(Palindromestring args[]){
         int matrix[][] ={{4,7,8},{8,8,7},{7,7,5}};
         sum(matrix);
     }

@@ -15,7 +15,7 @@ public class subarrays {
         }
         
     }
-    public static void main(String args[]){
+    public static void main(Palindromestring args[]){
         int numbers[] = {2,3,4,5,6,7};
         printsubarray(numbers);
     }

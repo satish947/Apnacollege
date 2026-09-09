@@ -1,6 +1,6 @@
 import java.util.*;
 public class JavaBasics {
-    public static void main(String[] args) {
+    public static void main(Palindromestring[] args) {
         Scanner sc =  new Scanner(System.in);
         int num;
         int fact = 1;

@@ -8,7 +8,7 @@ public class largest {
     }
     return largest;
 }
-public static void main(String args[]){
+public static void main(Palindromestring args[]){
     int numbers[] = {1,5,78,99};
     System.out.println("largest: "+ getlargest(numbers));
 }

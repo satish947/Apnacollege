@@ -21,7 +21,7 @@ public class SelectionSort {
             System.out.print(arr[i]+ " ");
         }
     }
-    public static void main(String args[]){
+    public static void main(Palindromestring args[]){
         int arr[] = {2, 4,5,1,7};
         insertionsort(arr);
          printarr(arr);

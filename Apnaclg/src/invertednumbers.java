@@ -5,7 +5,7 @@ public class invertednumbers {
                 System.out.print(j);
             }System.out.println();
         }
-    }public static void main(String args[]){
+    }public static void main(Palindromestring args[]){
         invertedhalfnumbers(5);
 
 

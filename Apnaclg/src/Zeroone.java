@@ -11,7 +11,7 @@ public class Zeroone {
             System.out.println();
         }
     }
-    public static void main(String args[]){
+    public static void main(Palindromestring args[]){
         Zero_one_triangle(5);
 
     }

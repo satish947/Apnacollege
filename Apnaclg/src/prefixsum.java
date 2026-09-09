@@ -20,7 +20,7 @@ public class prefixsum {
         }
         System.out.println("max sum :" +maxsum);
     }
-    public static void main(String args[]){
+    public static void main(Palindromestring args[]){
         int numbers[] = {1,3,5,7,9};
         prefixsum(numbers);
 

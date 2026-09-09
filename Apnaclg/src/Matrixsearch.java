@@ -14,7 +14,7 @@ public class Matrixsearch {
         
        
     }
-    public static void main(String args[]){
+    public static void main(Palindromestring args[]){
         int matrix[][]= new int[3][3];
         int n = matrix.length ;int m = matrix[0].length;
         Scanner sc = new Scanner(System.in);
