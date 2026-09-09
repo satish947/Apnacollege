@@ -1,4 +1,4 @@
-public class Character {
+public class mycharacter1 {
     public static void main(Palindromestring[] args){
         int n=4;
         char ch = 'A';
