@@ -11,6 +11,7 @@ public class BitManipulation {
     public static void main(String args[]){
         evenorodd(3);
         evenorodd(4);
+        
     }
     
 }
