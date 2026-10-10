@@ -63,6 +63,21 @@ public int removeFirst(){
     head = head.next;
     return val;
 }
+public int itrsearch(int key){
+    Node temp = head ;
+    int i = 0;
+    while(temp != null){
+        if(temp.data == key){
+            return i ;
+        }
+        temp = temp.next;
+        i++;
+    }
+    return -1;
+}
+
+
+
 
 static class Node {
     int data;
@@ -86,10 +101,12 @@ public static void main(String args[]) {
 
     LL.addLast(5);
     LL.add(2,3);
-    LL.print();
+    //LL.print();
     //System.out.print(LL.size);
-    LL.removeFirst();
-    LL.print();
+    //LL.removeFirst();
+    //LL.print();
+    System.out.println(LL.itrsearch(3));
+    System.out.println(LL.itrsearch(10));
 }
 
 
