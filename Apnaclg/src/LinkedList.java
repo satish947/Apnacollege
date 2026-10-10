@@ -1,9 +1,12 @@
 public class LinkedList {
 public static Node head;
-public static Node tail;
+public static Node tail; 
+public static int size;
+
 
 public void addFirst(int data) {
     Node newNode = new Node(data);
+    size++;
 
     if (head == null) {
         head = tail = newNode;
@@ -16,6 +19,7 @@ public void addFirst(int data) {
 
 public void addLast(int data) {
     Node newNode = new Node(data);
+    size++;
 
     if (head == null) {
         head = tail = newNode;
@@ -43,6 +47,7 @@ public void print() {
 }
 public void add(int idx,int data){
     Node newNode = new Node(data);
+    size++;
     Node temp = head ;
     int i = 0;
 
@@ -71,12 +76,13 @@ public static void main(String args[]) {
 
     LL.addFirst(1);
 
-    LL.addLast(3);
+    LL.addLast(4);
     LL.print();
 
-    LL.addLast(4);
-    LL.add(2,9);
+    LL.addLast(5);
+    LL.add(2,3);
     LL.print();
+    System.out.print(LL.size);
 }
 
 
