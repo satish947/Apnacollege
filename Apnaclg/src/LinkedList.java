@@ -58,6 +58,11 @@ public void add(int idx,int data){
     newNode.next= temp.next;
     temp.next = newNode;
 }
+public int removeFirst(){
+    int val =head.data;
+    head = head.next;
+    return val;
+}
 
 static class Node {
     int data;
@@ -82,7 +87,9 @@ public static void main(String args[]) {
     LL.addLast(5);
     LL.add(2,3);
     LL.print();
-    System.out.print(LL.size);
+    //System.out.print(LL.size);
+    LL.removeFirst();
+    LL.print();
 }
 
 
