@@ -41,6 +41,18 @@ public void print() {
 
     System.out.println();
 }
+public void add(int idx,int data){
+    Node newNode = new Node(data);
+    Node temp = head ;
+    int i = 0;
+
+    while(i<idx-1){
+        temp = temp.next;
+        i++;
+    }
+    newNode.next= temp.next;
+    temp.next = newNode;
+}
 
 static class Node {
     int data;
@@ -55,18 +67,15 @@ static class Node {
 public static void main(String args[]) {
     LinkedList LL = new LinkedList();
 
-    LL.print();
-
     LL.addFirst(2);
-    LL.print();
 
     LL.addFirst(1);
-    LL.print();
 
     LL.addLast(3);
     LL.print();
 
     LL.addLast(4);
+    LL.add(2,9);
     LL.print();
 }
 
