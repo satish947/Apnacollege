@@ -91,6 +91,19 @@ public int helper(Node head,int key){
 public int recsearch(int key){
     return helper(head,key);
 }
+public void reverse(){
+    Node prev = null;
+    Node curr= tail = head;
+    Node next;
+
+    while(curr != null){
+        next = curr.next;
+        curr.next = prev;
+        prev = curr;
+        curr = next;
+    }
+    head = prev;
+}
 
 
 
@@ -113,16 +126,18 @@ public static void main(String args[]) {
     LL.addFirst(1);
 
     LL.addLast(4);
-    LL.print();
+    // LL.print();
 
     LL.addLast(5);
     LL.add(2,3);
     //LL.print();
     //System.out.print(LL.size);
     //LL.removeFirst();
-    //LL.print();
-    System.out.println(LL.itrsearch(3));
-    System.out.println(LL.itrsearch(10));
+    LL.print();
+    // System.out.println(LL.itrsearch(3));
+    // System.out.println(LL.itrsearch(10));
+   LL.reverse();
+   LL.print();
 }
 
 
