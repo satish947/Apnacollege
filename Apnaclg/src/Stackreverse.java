@@ -8,23 +8,24 @@ public class Stackreverse {
         int idx = 0;
 
         while (idx < str.length()) {
-            s.push(Character.valueOf(str.charAt(idx)));
+            s.push(str.charAt(idx));
             idx++;
         }
 
-        StringBuilder result = new StringBuilder();
+        StringBuilder result = new StringBuilder("");
 
         while (!s.isEmpty()) {
-            Character curr = s.pop();
+            char curr = s.pop();
             result.append(curr);
         }
 
         return result.toString();
     }
 
-    public static void main(String[] args) {
-        String str = "hello";
+    public static void main(String args[]) {
+        String str = "abc";
         String result = reversestring(str);
+
         System.out.println(result);
     }
 }
