@@ -126,6 +126,49 @@ public void DeleteNthnode(int n){
     return;
 
 }
+public Node findmid(Node head){
+    Node slow = head;
+    Node fast = head;
+
+    while(fast != null && fast.next !=null){
+        slow = slow.next;
+        fast = fast.next;
+    }
+    return slow;
+
+}
+public boolean checkpalindrome(){
+    if(head == null || head.next == null){
+        return true;
+    }
+    Node midNode = findmid(head);
+
+    Node prev = null;
+    Node curr = midNode;
+    Node next;
+
+    while(curr!= null){
+        next = curr.next;
+        curr.next = prev;
+        prev = curr;
+        curr = next;
+    }
+    Node right = prev;
+    Node left = head;
+
+    while(right != null){
+
+       
+            if(left.data != right.data){
+                return false;
+            }
+            left = left.next;
+
+            right = right.next;
+        
+    }
+    return true;
+}
 
 
 
@@ -143,15 +186,15 @@ static class Node {
 public static void main(String args[]) {
     LinkedList LL = new LinkedList();
 
-    LL.addFirst(2);
+    LL.addLast(1);
 
-    LL.addFirst(1);
+    LL.addLast(2);
 
-    LL.addLast(4);
+    LL.addLast(2);
     // LL.print();
-
-    LL.addLast(5);
-    LL.add(2,3);
+    LL.addLast(1);
+    // LL.addLast(5);
+    // LL.add(2,3);
     //LL.print();
     //System.out.print(LL.size);
     //LL.removeFirst();
@@ -160,8 +203,8 @@ public static void main(String args[]) {
     // System.out.println(LL.itrsearch(10));
 //    LL.reverse();
    LL.print();
-   LL.DeleteNthnode(3);
-   LL.print();
+//    LL.DeleteNthnode(3);
+System.out.print(LL.checkpalindrome());
 }
 
 
