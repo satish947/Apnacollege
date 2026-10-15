@@ -183,28 +183,29 @@ static class Node {
     }
 }
 
+public static boolean isCycle(){
+    Node slow = head;
+    Node fast = head;
+     
+
+    while(fast != null && fast.next != null){
+        slow = slow.next;
+        fast = fast.next.next;
+
+        if(slow == fast){
+            return true;
+        }
+    }
+    return false;
+}
+
 public static void main(String args[]) {
-    LinkedList LL = new LinkedList();
+head = new Node(1);
+head.next = new Node(2);
+head.next.next = new Node (3);
+head.next.next.next = head;
+System.out.println(isCycle());
 
-    LL.addLast(1);
-
-    LL.addLast(2);
-
-    LL.addLast(2);
-    // LL.print();
-    LL.addLast(1);
-    // LL.addLast(5);
-    // LL.add(2,3);
-    //LL.print();
-    //System.out.print(LL.size);
-    //LL.removeFirst();
-    LL.print();
-    // System.out.println(LL.itrsearch(3));
-    // System.out.println(LL.itrsearch(10));
-//    LL.reverse();
-   LL.print();
-//    LL.DeleteNthnode(3);
-System.out.print(LL.checkpalindrome());
 }
 
 
