@@ -33,6 +33,37 @@ public class Diam {
 
     }
 
+
+    public static boolean isIdentical(Node node ,Node subRoot){
+        if(node == null && subRoot == null){
+            return true;
+        }
+        else if(node == null || subRoot == null || node.data != subRoot.data){
+            return false;
+        }
+        if(!isIdentical(node.right,subRoot.right)){
+            return false;
+        }
+        if(!isIdentical(node.left,subRoot.left)){
+            return false;
+        }
+        return true;
+        
+
+    }
+    public static boolean isSubtree(Node root,Node subRoot){
+        if(root == null){
+            return false;
+        }
+        if(root.data == subRoot.data){
+            if(isIdentical(root,subRoot)){
+                return true;
+            }
+        }
+        return isSubtree(root.left,subRoot)|| isSubtree(root.right,subRoot);
+    }
+
+
     public static void main(String args[]){
         Node root = new Node(1);
         root.left = new Node(2);
@@ -41,6 +72,9 @@ public class Diam {
         root.right = new Node(3);
         root.right.right = new Node(6);
 
-        System.out.print(diameter(root));
+        Node subRoot = new Node(2);
+        subRoot.left = new Node(4);
+
+        System.out.print(isSubtree(root,subRoot));
     }
 }
