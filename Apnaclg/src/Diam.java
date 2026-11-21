@@ -62,6 +62,17 @@ public class Diam {
         }
         return isSubtree(root.left,subRoot)|| isSubtree(root.right,subRoot);
     }
+    public static void Klevel(Node root ,int level, int k){
+        if(root== null){
+            return;
+        }
+        if(level == k){
+            System.out.print(root.data +" ");
+            return ;
+        }
+        Klevel(root.left,level+1,k);
+        Klevel(root.right,level+1,k);
+    }
 
 
     public static void main(String args[]){
@@ -72,9 +83,7 @@ public class Diam {
         root.right = new Node(3);
         root.right.right = new Node(6);
 
-        Node subRoot = new Node(2);
-        subRoot.left = new Node(4);
-
-        System.out.print(isSubtree(root,subRoot));
+        int k = 2;
+         Klevel(root,1,k);
     }
 }
