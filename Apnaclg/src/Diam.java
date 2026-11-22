@@ -132,6 +132,31 @@ public class Diam {
         return max+1;
     }
 
+    public static int transform(Node root){
+        if(root == null){
+            return 0;
+        }
+        int Leftchild = transform(root.left);
+        int rightchild = transform(root.right);
+
+        int data = root.data;
+        int newLeft = root.left == null ? 0 : root.left.data;
+        int newRght = root.right == null ? 0 : root.right.data;
+
+        root. data = root.left.data+ Leftchild + root.right.data +rightchild;
+        return data;
+    }
+    public static void preorder(Node root ){
+        if(root == null){
+
+            return;
+        }
+        System.out.print(root.data+ " ");
+        preorder(root.left);
+        preorder(root.right);
+    }
+
+
 
     public static void main(String args[]){
         Node root = new Node(1);
@@ -140,8 +165,8 @@ public class Diam {
         root.left.right = new Node(5);
         root.right = new Node(3);
         root.right.right = new Node(6);
-
-       int n= 6,k=2;
-       kAncestor(root,n,k);
+        root.right.left = new Node(7);
+      transform(root);
+      preorder(root);
     }
 }
