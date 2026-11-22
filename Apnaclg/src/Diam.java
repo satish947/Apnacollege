@@ -111,6 +111,26 @@ public class Diam {
         Node lca = path1.get(i-1);
         return lca;
     }
+    public static int kAncestor(Node root,int n,int k){
+        if(root == null){
+            return -1;
+        }
+        if(root.data == n){
+            return 0;
+        }
+        int leftDist = kAncestor(root.left,n,k);
+        int rightDist = kAncestor(root.right,n,k);
+
+        if(leftDist == -1 && rightDist == -1){
+            return -1;
+        }
+
+        int max = Math.max(leftDist,rightDist);
+        if(max+1 == k){
+            System.out.println(root.data);
+        }
+        return max+1;
+    }
 
 
     public static void main(String args[]){
@@ -121,7 +141,7 @@ public class Diam {
         root.right = new Node(3);
         root.right.right = new Node(6);
 
-       int n1 = 4; int n2 = 6;
-       System.out.print(lca(root,n1,n2).data);
+       int n= 6,k=2;
+       kAncestor(root,n,k);
     }
 }
