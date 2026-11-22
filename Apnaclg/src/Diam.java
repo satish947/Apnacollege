@@ -1,3 +1,4 @@
+import java.util.*;
 public class Diam {
     static class Node{
         int data;
@@ -73,6 +74,43 @@ public class Diam {
         Klevel(root.left,level+1,k);
         Klevel(root.right,level+1,k);
     }
+    public static boolean getpath(Node root,int n,ArrayList<Node> path){
+        if(root == null){
+            return false;
+        }
+        path.add(root);
+        if(root.data == n){
+            return true;
+        }
+        boolean foundLeft = getpath(root.left,n,path);
+        boolean foundRight = getpath(root.right,n,path);
+
+        if(foundLeft || foundRight){
+            return true;
+        }
+        path.remove(path.size()-1);
+        return false;
+
+    }
+
+    public static Node lca(Node root ,int n1,int n2){
+        ArrayList<Node>path1 = new ArrayList<>();
+        ArrayList<Node>path2 = new ArrayList<>();
+
+        getpath(root,n1,path1);
+        getpath(root,n2,path2);
+
+
+        int i = 0;
+        for(;i<path1.size() && i<path2.size();i++){
+            if(path1.get(i) != path2.get(i)){
+                break;
+            }
+
+        }
+        Node lca = path1.get(i-1);
+        return lca;
+    }
 
 
     public static void main(String args[]){
@@ -83,7 +121,7 @@ public class Diam {
         root.right = new Node(3);
         root.right.right = new Node(6);
 
-        int k = 2;
-         Klevel(root,1,k);
+       int n1 = 4; int n2 = 6;
+       System.out.print(lca(root,n1,n2).data);
     }
 }
