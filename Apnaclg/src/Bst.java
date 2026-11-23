@@ -59,6 +59,26 @@ public static void printinrange(Node root,int k1, int k2){
         printinrange(root.right,k1,k2);
     }
 }
+public static void printpath(ArrayList<Integer>path){
+    for(int i = 0; i<path.size(); i++){
+        System.out.print(path.get(i) + "->");
+    }
+    System.out.println("null");
+}
+public static void print2leaf(Node root ,ArrayList<Integer>path){
+    if(root == null){
+        return;
+    }
+    path.add(root.data);
+    if(root.left ==null && root.right == null){
+        printpath(path);
+    }
+    print2leaf(root.left,path);
+    print2leaf(root.right,path);
+    path.remove(path.size()-1);
+
+}
+
 public static void main(String args[]){
     int value[] = {5,1,3,4,2,7};
     Node root = null;
@@ -68,7 +88,7 @@ public static void main(String args[]){
     }
     inorder(root);
     System.out.println();
-        printinrange(root,5,12);
+        print2leaf(root,new ArrayList<>());
 }
     
 }
