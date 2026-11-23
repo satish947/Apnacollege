@@ -29,6 +29,36 @@ public static void inorder(Node root){
     inorder(root.right);
 
 }
+public static boolean search (Node root ,int key){
+    if(root == null){
+        return false;
+
+    }
+    if(root.data == key){
+        return true;
+    }
+    if(root.data >key){
+        return search(root.left,key);
+    }else{
+        return search(root.right,key);
+    }
+}
+
+public static void printinrange(Node root,int k1, int k2){
+    if(root == null){
+        return;
+    }
+    if(root.data >= k1 && root.data<= k2){
+        printinrange(root.left,k1,k2);
+        System.out.print(root.data+" ");
+        printinrange(root.right,k1,k2);
+    }
+    else if(root.data < k1){
+        printinrange(root.left,k1,k2);
+    }else{
+        printinrange(root.right,k1,k2);
+    }
+}
 public static void main(String args[]){
     int value[] = {5,1,3,4,2,7};
     Node root = null;
@@ -38,6 +68,7 @@ public static void main(String args[]){
     }
     inorder(root);
     System.out.println();
+        printinrange(root,5,12);
 }
     
 }
