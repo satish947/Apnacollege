@@ -29,16 +29,21 @@ public class mirror {
         preorder(root.left);
         preorder(root.right);
     }
-    public static void main(String args[]){
-          Node root = new Node(1);
-        root.left = new Node(2);
-        root.left.left = new Node(4);
-        root.left.right = new Node(5);
-        root.right = new Node(3);
-        root.right.right = new Node(6);
-        root.right.left = new Node(7);
 
-        root = createmirror(root);
+    public static Node CreateBSt(int arr[] ,int st,int end){
+        if(st > end){
+            return null;
+        }
+
+        int mid= (st + end)/2;
+        Node root = new Node(arr[mid]);
+        root.left = CreateBSt(arr,st,mid-1);
+        root.right = CreateBSt(arr,mid+1,end);
+        return root;
+    }
+    public static void main(String args[]){
+        int arr[] ={3,5,6,8,10,11,12};
+        Node root = CreateBSt(arr,  0,arr.length-1);
         preorder(root);
     }
 
